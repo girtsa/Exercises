@@ -89,13 +89,27 @@ namespace Exercises.Level1
         /// or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5
         /// higher in all cases.
         /// 
-        /// caughtSpeeding(60, false) → 0
-        /// caughtSpeeding(65, false) → 1
-        /// caughtSpeeding(65, true) → 0
+        /// caughtSpeeding(60, false) → 0             65
+        /// caughtSpeeding(65, false) → 1             70
+        /// caughtSpeeding(65, true) → 0              70
         /// </summary>
-        public int CaughtSpeeding(int speed, bool isBirthday)
+        public int CaughtSpeeding(int speed, bool ithsBirday)
         {
-            throw new NotImplementedException();
+
+            if (speed >= 0 && speed <= 70)
+            {
+                return 0;
+            }
+
+            else if (speed >= 61 && speed >= 80 && ithsBirday)
+            {
+                return 1;
+            }
+            else
+            { 
+
+            return 0;
+
         }
 
         /// <summary>
