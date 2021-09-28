@@ -89,30 +89,29 @@ namespace Exercises.Level1
         /// or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5
         /// higher in all cases.
         /// 
-        /// caughtSpeeding(60, false) → 0             65
-        /// caughtSpeeding(65, false) → 1             70
-        /// caughtSpeeding(65, true) → 0              70
+        /// caughtSpeeding(60, false) → 0            
+        /// caughtSpeeding(65, false) → 1            
+        /// caughtSpeeding(65, true) → 0             
         /// </summary>
         public int CaughtSpeeding(int speed, bool ithsBirday)
         {
-            if (speed <= 65)
+            if (ithsBirday)
+            {
+                speed -= 5;
+            }
+
+            if (speed <= 60)
             {
                 return 0;
             }
-
-            if (speed >= 61 && speed <= 85)
+            else if (speed > 60 && speed <= 80)
             {
+
                 return 1;
-            }
-            else if (speed >= 81 && ithsBirday)
-            {
-
-                return 0;
             }
             else
 
-                return 1;
-
+                return 2;
         }
 
         /// <summary>
@@ -125,15 +124,11 @@ namespace Exercises.Level1
         /// </summary>
         public int SortaSum(int a, int b)
         {
-            if (a <= 4 || b <= 6)
+            if (a + b >= 10 && a + b < 20)
             {
                 return 20;
             }
-            if (a >= 11 || b >= 10)
-            {
-                return 21;
-            }
-            return 7;
+            else return a + b;
         } 
 
 
