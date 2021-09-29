@@ -129,62 +129,80 @@ namespace Exercises.Level1
                 return 20;
             }
             else return a + b;
-        } 
+        }
 
 
-/// <summary>
-/// Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean
-/// indicating if we are on vacation, return a string of the form "7:00" indicating when the
-/// alarm clock should ring. Weekdays, the alarm should be "7:00" and on the weekend it
-/// should be "10:00". Unless we are on vacation -- then on weekdays it should be "10:00"
-/// and weekends it should be "off".
-/// 
-/// alarmClock(1, false) → "7:00"
-/// alarmClock(5, false) → "7:00"
-/// alarmClock(0, false) → "10:00"
-/// </summary>
-public string AlarmClock(int day, bool vacation)
-{
-    throw new NotImplementedException();
+        /// <summary>
+        /// Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean
+        /// indicating if we are on vacation, return a string of the form "7:00" indicating when the
+        /// alarm clock should ring. Weekdays, the alarm should be "7:00" and on the weekend it
+        /// should be "10:00". Unless we are on vacation -- then on weekdays it should be "10:00"
+        /// and weekends it should be "off".
+        /// 
+        /// alarmClock(1, false) → "7:00"
+        /// alarmClock(5, false) → "7:00"
+        /// alarmClock(0, false) → "10:00"
+        /// </summary>
+        public string AlarmClock(int day, bool vacation)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// The number 6 is a truly great number. Given two int values, a and b, return true if either
+        /// one is 6. Or if their sum or difference is 6. Note: the function Math.abs(num) computes the
+        /// absolute value of a number.
+        /// 
+        /// love6(6, 4) → true
+        /// love6(4, 5) → false
+        /// love6(1, 5) → true
+        /// </summary>
+        public bool Love6(int a, int b)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
+        /// true, in which case return true if the number is less or equal to 1, or greater or equal to
+        /// 10.
+        /// 
+        /// in1To10(5, false) → true
+        /// in1To10(11, false) → false
+        /// in1To10(11, true) → true
+        /// </summary>
+        public bool In1To10(int n, bool outsideMode)
+        {
+            if (!outsideMode)
+                if (n <= 10 && n >= 1)
+                {
+                    return true;
+                }
+            return false;
+        }
+
+        else
+        {
+                if (n< 1 || n >= 10)
+                {
+                    return true;
+                }
+            return false;
+    }
 }
 
-/// <summary>
-/// The number 6 is a truly great number. Given two int values, a and b, return true if either
-/// one is 6. Or if their sum or difference is 6. Note: the function Math.abs(num) computes the
-/// absolute value of a number.
-/// 
-/// love6(6, 4) → true
-/// love6(4, 5) → false
-/// love6(1, 5) → true
-/// </summary>
-public bool Love6(int a, int b)
-{
-    throw new NotImplementedException();
-}
 
-/// <summary>
-/// Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
-/// true, in which case return true if the number is less or equal to 1, or greater or equal to
-/// 10.
-/// 
-/// in1To10(5, false) → true
-/// in1To10(11, false) → false
-/// in1To10(11, true) → true
-/// </summary>
-public bool In1To10(int n, bool outsideMode)
-{
-    throw new NotImplementedException();
-}
 
-/// <summary>
-/// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
-/// 11. Return true if the given non-negative number is special. Use the % "mod" operator.
-/// 
-/// specialEleven(22) → true
-/// specialEleven(23) → true
-/// specialEleven(24) → false
-/// </summary>
-public bool SpecialEleven(int n)
+
+        /// <summary>
+        /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
+        /// 11. Return true if the given non-negative number is special. Use the % "mod" operator.
+        /// 
+        /// specialEleven(22) → true
+        /// specialEleven(23) → true
+        /// specialEleven(24) → false
+        /// </summary>
+        public bool SpecialEleven(int n)
 {
     throw new NotImplementedException();
 }
@@ -483,5 +501,5 @@ public int SumLimit(int a, int b)
 {
     throw new NotImplementedException();
 }
-}
+    }
 }
