@@ -145,8 +145,25 @@ namespace Exercises.Level1
         /// </summary>
         public string AlarmClock(int day, bool vacation)
         {
-            throw new NotImplementedException();
+            string alarm7 = "7:00";
+            string alarm10 = "10:00";
+
+            if (vacation)
+            {
+                if (day == 0 || day == 6)
+                {
+                    return "off";
+                }
+                return alarm10;
+            }
+
+            if (day == 0 || day == 6)
+            {
+                return alarm10;
+            }
+            return alarm7;
         }
+        
 
         /// <summary>
         /// The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -159,7 +176,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            if (a == 6 || b == 6 || a-b == 6 || b-a == 6 || a+b == 6)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -173,8 +194,24 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            if (!outsideMode)
+            {
+                if (n <= 10 && n >= 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                if (n < 1 || n >= 10)
+                {
+                    return true;
+                }
+                return false;
+            }
         }
+
 
 
         /// <summary>

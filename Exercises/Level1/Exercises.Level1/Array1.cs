@@ -62,14 +62,16 @@ namespace Exercises.Level1
     /// </summary>
     public int[] MakePi()
     {
-        int[] array = new int[3];
-        array[0] = 3;
-        array[1] = 1;
-        array[2] = 4;
+            /// int[] array = new int[3];
+            /// array[0] = 3;
+            /// array[1] = 1;
+            /// array[2] = 4;
 
-        return array;
+            /// return array;
 
 
+            int[] array = { 3, 1, 4 };
+            return array;
     }
 
     /// <summary>
@@ -82,7 +84,19 @@ namespace Exercises.Level1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+            int firstA = a[0];
+            int lastIndexA = a.Length - 1;
+            int lastA = a[lastIndexA];
+            int firstB = b[0];
+            int lastIndexB = b.Length - 1;
+            int lastB = b[lastIndexB];
+
+            if (firstA == firstB || lastA == lastB)
+            {
+                return true;
+            }
+            return false;
+
     }
 
     /// <summary>
