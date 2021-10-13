@@ -166,8 +166,24 @@ namespace Exercises.Level1
     /// </summary>
     public bool More14(int[] nums)
     {
-        throw new NotImplementedException();
-    }
+            int NumberOfOnes = 0;
+            int NumberOfFours = 0;
+            foreach (int number in nums)
+            {
+                if (number == 1)
+                { NumberOfOnes++; }
+                if (number == 4)
+                { NumberOfFours++; }
+
+            }
+            if (NumberOfOnes > NumberOfFours)
+            {
+                return true;
+            }
+            return false;
+
+
+            // return NumberOfOnes > NumberOfFours;
 
     /// <summary>
     /// Given a number n, create and return a new int array of length n, containing the numbers
