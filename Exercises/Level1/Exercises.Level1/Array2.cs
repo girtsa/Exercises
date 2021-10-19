@@ -17,6 +17,7 @@ namespace Exercises.Level1
         /// </summary>
         public int CountEvens(int[] nums)
         {
+
             int sum = 0;
             foreach (int num in nums)
             {
