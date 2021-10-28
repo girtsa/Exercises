@@ -163,7 +163,7 @@ namespace Exercises.Level1
             }
             return alarm7;
         }
-        
+
 
         /// <summary>
         /// The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -176,7 +176,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            if (a == 6 || b == 6 || a-b == 6 || b-a == 6 || a+b == 6)
+            if (a == 6 || b == 6 || a - b == 6 || b - a == 6 || a + b == 6)
             {
                 return true;
             }
@@ -291,8 +291,20 @@ namespace Exercises.Level1
         /// </summary>
         public int TeenSum(int a, int b)
         {
-            throw new NotImplementedException();
+
+            if (a >= 13 && a <= 19)
+            {
+                return 19;
+            }
+
+            if (b >= 13 && b <= 19)
+            {
+                return 19;
+            }
+            return a + b;
         }
+
+
 
         /// <summary>
         /// Your cell phone rings. Return true if you should answer it. Normally you answer, except in

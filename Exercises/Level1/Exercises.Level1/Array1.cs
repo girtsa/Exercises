@@ -141,8 +141,15 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            return new int[] { nums[2], nums[1], nums[0] };
+            var nums2 = new int[3];
+            nums2[0] = nums[2];
+            nums2[1] = nums[1];
+            nums2[2] = nums[0];
+
+                return nums2;
         }
+
+
 
         /// <summary>
         /// Given an array of ints length 3, figure out which is larger, the first or last element in the
