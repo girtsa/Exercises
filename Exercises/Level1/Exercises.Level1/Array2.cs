@@ -144,9 +144,9 @@ namespace Exercises.Level1
             {
                 if (nums[i] == 2 && nums[i + 1] == 2)
 
-             return true;
-        }
-             return false;
+                    return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -196,6 +196,10 @@ namespace Exercises.Level1
         /// </summary>
         public bool More14(int[] nums)
         {
+            // 1. piedefinēt, kur skaitīsim 1 un 4
+            // 2. Saskaitīt masīvā esošos 1 un 4
+            // 3. Atgriezt true ja 1 skaits ir vairāk kā 4 skaits
+
             int NumberOfOnes = 0;
             int NumberOfFours = 0;
             foreach (int number in nums)
@@ -208,7 +212,7 @@ namespace Exercises.Level1
             }
             if (NumberOfOnes > NumberOfFours)
             {
-             return true;
+                return true;
             }
             return false;
         }
@@ -238,26 +242,26 @@ namespace Exercises.Level1
 
             return result;
         }
-            
 
 
-            /// <summary>
-            /// Given an array of ints, return true if every element is a 1 or a 4.
-            /// 
-            /// only14([1, 4, 1, 4]) → true
-            /// only14([1, 4, 2, 4]) → false
-            /// only14([1, 1]) → true
-            /// </summary>
-            public bool Only14(int[] nums)
-            {
-                for (int i = 0; i < nums.Length; i++)
+
+        /// <summary>
+        /// Given an array of ints, return true if every element is a 1 or a 4.
+        /// 
+        /// only14([1, 4, 1, 4]) → true
+        /// only14([1, 4, 2, 4]) → false
+        /// only14([1, 1]) → true
+        /// </summary>
+        public bool Only14(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] != 1 && nums[i] != 4)
 
-            return false;
+                    return false;
             }
             return true;
-            }
+        }
 
         /// <summary>
         /// Given a number n, create and return a new string array of length n, containing the strings
@@ -269,48 +273,79 @@ namespace Exercises.Level1
         /// fizzArray2(2) → ["0", "1"]
         /// </summary>
         public string[] FizzArray2(int nums)
-            {
-                throw new NotImplementedException();
-            }
+        {
+            throw new NotImplementedException();
+        }
 
-            /// <summary>
-            /// Given an array of ints, return true if it contains no 1's or it contains no 4's.
-            /// 
-            /// no14([1, 2, 3]) → true
-            /// no14([1, 2, 3, 4]) → false
-            /// no14([2, 3, 4]) → true
-            /// </summary>
-            public bool No14(int[] nums)
-            {
-                throw new NotImplementedException();
-            }
+        /// <summary>
+        /// Given an array of ints, return true if it contains no 1's or it contains no 4's.
+        /// 
+        /// no14([1, 2, 3]) → true
+        /// no14([1, 2, 3, 4]) → false
+        /// no14([2, 3, 4]) → true
+        /// </summary>
+        public bool No14(int[] nums)
+        {
+            throw new NotImplementedException();
+        }
 
-            /// <summary>
-            /// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in
-            /// the array, at least one of the pair is that value. Return true if the given value is everywhere
-            /// in the array.
-            /// 
-            /// isEverywhere([1, 2, 1, 3], 1) → true
-            /// isEverywhere([1, 2, 1, 3], 2) → false
-            /// isEverywhere([1, 2, 1, 3, 4], 1) → false
-            /// </summary>
-            public bool IsEverywhere(int[] nums, int val)
+        /// <summary>
+        /// We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in
+        /// the array, at least one of the pair is that value. Return true if the given value is everywhere
+        /// in the array.
+        /// 
+        /// isEverywhere([1, 2, 1, 3], 1) → true
+        /// isEverywhere([1, 2, 1, 3], 2) → false
+        /// isEverywhere([1, 2, 1, 3, 4], 1) → false
+        /// </summary>
+        public bool IsEverywhere(int[] nums, int val)
+        {
+            for (int i = 0; i < nums.Length - 1; i++)
             {
-                throw new NotImplementedException();
+                if (nums[i] != val && nums[i + 1] != val)
+                {
+                    return false;
+                }
             }
+            return true;
+        }
 
-            /// <summary>
-            /// Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4,
-            /// but not both.
-            /// 
-            /// either24([1, 2, 2]) → true
-            /// either24([4, 4, 1]) → true
-            /// either24([4, 4, 1, 2, 2]) → false
-            /// </summary>
-            public bool Either24(int[] nums)
+        /// <summary>
+        /// Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4,
+        /// but not both.
+        /// 
+        /// either24([1, 2, 2]) → true
+        /// either24([4, 4, 1]) → true
+        /// either24([4, 4, 1, 2, 2]) → false
+        /// </summary>
+        public bool Either24(int[] nums)
+        {
+            bool hasNext2 = false;
+            bool hasNext4 = false;
+
+            for (int i = 0; i < nums.Length - 1; i++)
             {
-                throw new NotImplementedException();
+                if (nums[i] == 2 && nums[i + 1] == 2)
+                {
+                    hasNext2 = true;
+                }
+                if (nums[i] == 4 && nums[i + 1] == 4)
+                {
+                    hasNext4 = true;
+                }
             }
+            if (hasNext2 && hasNext4)
+            {
+                return false;
+            }
+            if (hasNext2 || hasNext4)
+            {
+                return true;
+            }
+            return false;
+
+        }
+   
 
             /// <summary>
             /// Given arrays nums1 and nums2 of the same length, for every element in nums1, consider
